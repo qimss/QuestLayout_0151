@@ -51,10 +51,33 @@ fun FirstOnActivity(modifier: Modifier = Modifier) {
                 .padding(12.dp),
             colors = CardDefaults.cardColors(containerColor = Color.DarkGray)
         ) {
+            Row {
+                Image(
+                    painter = painterResource(R.drawable.umy),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
+                )
 
+                Spacer(modifier = Modifier.width(30.dp))
 
-
+                Column {
+                    Text(
+                        text = stringResource(R.string.nama),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(
+                        text = stringResource(R.string.alamat),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                }
+            }
         }
-
     }
 }
